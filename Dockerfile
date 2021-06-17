@@ -5,4 +5,4 @@ COPY *.sh /root/
 RUN sh init.sh
 VOLUME /opt/app/appid_list
 EXPOSE 8000
-CMD uvicorn main:app --root-path=/opt/app/appid_list --reload
+CMD cd /opt/app/appid_list && uvicorn main:app --reload
